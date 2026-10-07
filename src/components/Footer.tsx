@@ -1,8 +1,8 @@
 
 function Footer(){
     return(
-        <footer>
-            <p> Copyright &copy; 2027 | All rights reserved </p>
+        <footer className="border-top mt-5 py-3">
+            <p className="text-center text-muted small mb-0"> Copyright &copy; {new Date().getFullYear()} | All rights reserved </p>
         </footer>
     );
 }
