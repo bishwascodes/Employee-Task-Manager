@@ -6,15 +6,21 @@
 // Tasks completed
 
 export type employee = {
-    name? : string,
-    department? : string,
-    productivityScore? : number,
-    tasksCompleted? : number
+    id: number,
+    name : string,
+    department : string,
+    productivityScore : number,
+    tasksCompleted : number
 }
 
-function Employee( {name, department, productivityScore, tasksCompleted} :  employee ) {
+function Employee( {id, name, department, productivityScore, tasksCompleted} :  employee ) {
     return (
-        <h1> I'm an Employee </h1>
+        <div className="employee-item">
+            <h2 id={`id-${id}`}> {name} </h2>
+            <h3>Department : {department}</h3>
+            <h4>Productivity Score : {productivityScore}</h4>
+            <p> Tasks Completed :  {tasksCompleted}</p>
+        </div>
     )
 }
 
